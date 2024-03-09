@@ -1,0 +1,138 @@
+/* Fonts */
+@font-face {
+    font-family: "Open Sans";
+    src: url("opensans.ttf");
+}
+
+/* Base colors */
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #000000;
+    --accent-color: #5cb85c;
+    --border-color: #dddddd;
+    --text-color: #000000;
+    --background-color: #f5f5f5;
+}
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+button {
+    font-size: 1em;
+    font-weight: bold;
+    border: 2px solid var(--border-color);
+    border-radius: 0.5rem;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Chat app specific styles */
+.chat-window {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--background-color);
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.chat-header h1 {
+    font-size: 2em;
+}
+
+.chat-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.chat-message {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.chat-message .avatar {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    margin-right: 1rem;
+}
+
+.chat-message .content {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-message .content .metadata {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.8em;
+}
+
+.chat-message .content .metadata .sender {
+    font-weight: bold;
+}
+
+.chat-message .content .metadata .timestamp {
+    font-style: italic;
+}
+
+.chat-message .content .text {
+    font-size: 1.2em;
+}
+
+.chat-message .self {
+    flex-direction: row-reverse;
+}
+
+.chat-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: 0.5rem;
+}
+
+.chat-input input[type="text"] {
+    flex: 1;
+    margin-right: 1rem;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.2em;
+}
+
+.chat-input input[type="submit"] {
+    border: none;
+    cursor: pointer;
+}
